@@ -30,4 +30,5 @@ void loop() {
    } else {
     Serial.println("Failed to read data from QMC6310 sensor!");
  }
+ delay(2000);
 }

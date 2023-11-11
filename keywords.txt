@@ -4,3 +4,7 @@ getData                 KEYWORD2
 getX			KEYWORD2
 getY			KEYWORD2
 getZ			KEYWORD2
+setReset		KEYWORD2
+setMode1		KEYWORD2
+setMode2		KEYWORD2
+

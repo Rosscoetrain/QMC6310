@@ -1,6 +1,7 @@
 #ifndef QMC6310_H
 #define QMC6310_H
 
+#include <Arduino.h>
 #include <Wire.h>
 
 #define QMC6310_ADDRESS 0x0C // Default I2C address of QMC6310
@@ -26,6 +27,20 @@ public:
 
   bool begin();
   bool readData(int16_t &x, int16_t &y, int16_t &z);
+
+  void setADDR(uint8_t b);
+
+  uint8_t getMode1();
+  void setMode1(uint8_t m);
+
+  uint8_t getMode2();
+  void setMode2(uint8_t m);
+
+  void setReset();
+
+private:
+  uint8_t _ADDR = QMC6310_ADDRESS;
+  void _writeReg(byte r, byte v);
 };
 
 #endif // QMC6310_H
